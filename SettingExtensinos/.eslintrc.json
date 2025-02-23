@@ -1,0 +1,18 @@
+// ตั้งค่า ESLint และ Prettier ให้ทำงานร่วมกัน มีผลกับการใช้โปรเจคนั่นๆ
+
+//ESLint ใช้ตรวจจับข้อผิดพลาดในโค้ด
+//Prettier ใช้จัดรูปแบบโค้ดให้เป็นระเบียบ
+
+{
+    "extends": ["eslint:recommended", "prettier"], //ใช้กฎมาตรฐานของ ESLint และ ปิดกฎที่อาจขัดแย้งกับ Prettier โดยการเพิ่ม "prettier"
+    "env": {
+      "browser": true, //กำหนดให้ใช้กับ JavaScript ที่รันบน Browser
+      "es6": true //รองรับ ES6
+    },
+    "rules": {
+      "semi": ["error", "always"], // บังคับให้ใช้ ; หากลืม error
+      "quotes": ["error", "double"], // ใช้ " แทน '
+      "no-unused-vars": ["warn"] // เตือนถ้าประกาศตัวแปรแต่ไม่ได้ใช้
+    }
+  }
+  
